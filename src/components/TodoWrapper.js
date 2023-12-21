@@ -7,11 +7,16 @@ export const TodoWrapper = () => {
     const[todos, setTodos] = useState([])
     const addTodo = todo => {
         setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false}])
+        console.log(todos)
     }
     return(
         <div className = 'TodoWrapper'>
-            {/* import TodoForm */}
+            {/* import TodoForm and Todo*/}
             <TodoForm addTodo = {addTodo}/>
+            {todos.map((todo, index) =>(
+                <Todo task = {todo} key = {index}/>
+            ))}
+            <Todo/>
         </div>
     )
 }

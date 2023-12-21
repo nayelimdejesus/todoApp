@@ -23,7 +23,7 @@ export const TodoWrapper = () => {
             {/* import TodoForm and Todo*/}
             <TodoForm addTodo={addTodo}/>
             {todos.map((todo, index) =>(
-                <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo/>
+                <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo = {deleteTodo} />
             ))}
         
         </div>

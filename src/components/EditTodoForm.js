@@ -2,14 +2,14 @@ import React, {useState} from 'react'
 
 // add prop
 export const EditTodoForm = ({editTodo, task}) => {
-    const[value, setValue] = useState("");
+    const[value, setValue] = useState(task.task);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         editTodo(value, task.id);
 
-        setValue("");
-    }
+        // setValue("");
+    };
 
     return(
         // instead of div it will be form
